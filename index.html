@@ -1292,6 +1292,8 @@
     <button class="sound-toggle" id="soundToggle" title="Activar sonidos">🔈</button>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        
         // Audio Context - Fixed
         var audioCtx = null;
         var soundEnabled = false;
@@ -1340,20 +1342,27 @@
         document.querySelectorAll('.btn, .nav-links a, .portfolio-card').forEach(function(el) {
             el.addEventListener('mouseenter', function() { if (soundEnabled) playHover(); });
         });
+        
+        });
+    </script>
 
     <script>
-
+        document.addEventListener('DOMContentLoaded', function() {
+        
         // Typing effect
         var words = ["impacto", "ventas", "clientes", "éxito"];
         var wordIndex = 0, charIndex = 0, isDeleting = false, typeSpeed = 150;
         
         function type() {
+            var target = document.getElementById('typing-text');
+            if (!target) return;
+            
             var targetWord = words[wordIndex];
             if (isDeleting) {
-                document.getElementById('typing-text').textContent = targetWord.substring(0, charIndex - 1);
+                target.textContent = targetWord.substring(0, charIndex - 1);
                 charIndex--; typeSpeed = 80;
             } else {
-                document.getElementById('typing-text').textContent = targetWord.substring(0, charIndex + 1);
+                target.textContent = targetWord.substring(0, charIndex + 1);
                 charIndex++; typeSpeed = 150;
             }
             if (!isDeleting && charIndex === targetWord.length) { isDeleting = true; typeSpeed = 2000; }
@@ -1381,129 +1390,37 @@
         document.querySelectorAll('.fade-in').forEach(function(el) {
             observer.observe(el);
         });
-
-        // Mobile Menu
-        var mobileBtn = document.getElementById('mobileMenuBtn');
-        var navLinks = document.getElementById('navLinks');
         
-        mobileBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
+        // Mobile menu
+        var mobileBtn = document.querySelector('.mobile-menu-btn');
+        var nav = document.querySelector('.nav-links');
         
-        navLinks.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                mobileBtn.classList.remove('active');
-                navLinks.classList.remove('active');
+        if (mobileBtn && nav) {
+            mobileBtn.addEventListener('click', function() {
+                nav.classList.toggle('active');
             });
-        });
-
-        // Cookie Banner
-        if (!localStorage.getItem('cookiesAccepted')) {
-            document.getElementById('cookieBanner').style.display = 'flex';
-        }
-        
-        document.getElementById('acceptCookies').addEventListener('click', function() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            document.getElementById('cookieBanner').style.display = 'none';
-            if (soundEnabled) playClick();
-        });
-
-        // Parallax Effect
-        window.addEventListener('scroll', function() {
-            var scrolled = window.pageYOffset;
-            var heroBg = document.querySelector('.hero-bg');
-            if (heroBg) {
-                heroBg.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
-            }
-        });
-
-        // Button Loader
-        document.querySelectorAll('form').forEach(function(form) {
-            form.addEventListener('submit', function(e) {
-                var btn = this.querySelector('button[type="submit"]');
-                if (btn) {
-                    var originalText = btn.textContent;
-                    btn.innerHTML = 'Enviando...';
-                    btn.disabled = true;
-                    setTimeout(function() {
-                        btn.innerHTML = '✓ Enviado';
-                        btn.style.background = '#10b981';
-                        setTimeout(function() {
-                            btn.textContent = originalText;
-                            btn.disabled = false;
-                            btn.style.background = '';
-                        }, 2000);
-        }, 1500);
-        }
-
-        // Particles Effect
-        var canvas = document.getElementById('particles');
-        if (canvas) {
-            var ctx = canvas.getContext('2d');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
             
-            var particles = [];
-            var particleCount = 50;
-            
-            for (var i = 0; i < particleCount; i++) {
-                particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    size: Math.random() * 2 + 1,
-                    speedX: (Math.random() - 0.5) * 0.5,
-                    speedY: (Math.random() - 0.5) * 0.5,
-                    opacity: Math.random() * 0.5 + 0.2
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('active');
                 });
-            }
-            
-            function drawParticles() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                particles.forEach(function(p) {
-                    p.x += p.speedX;
-                    p.y += p.speedY;
-                    
-                    if (p.x < 0) p.x = canvas.width;
-                    if (p.x > canvas.width) p.x = 0;
-                    if (p.y < 0) p.y = canvas.height;
-                    if (p.y > canvas.height) p.y = 0;
-                    
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                    ctx.fillStyle = 'rgba(255, 122, 0, ' + p.opacity + ')';
-                    ctx.fill();
-                });
-                
-                // Draw lines between close particles
-                particles.forEach(function(p1, i) {
-                    particles.slice(i + 1).forEach(function(p2) {
-                        var dx = p1.x - p2.x;
-                        var dy = p1.y - p2.y;
-                        var dist = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (dist < 150) {
-                            ctx.beginPath();
-                            ctx.moveTo(p1.x, p1.y);
-                            ctx.lineTo(p2.x, p2.y);
-                            ctx.strokeStyle = 'rgba(255, 122, 0, ' + (0.1 * (1 - dist / 150)) + ')';
-                            ctx.stroke();
-                        }
-                    });
-                });
-                
-                requestAnimationFrame(drawParticles);
-            }
-            
-            drawParticles();
-            
-            window.addEventListener('resize', function() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
             });
         }
-
+        
+        // Cookies
+        var cookieBanner = document.querySelector('.cookie-banner');
+        if (cookieBanner) {
+            document.getElementById('acceptCookies').addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.style.display = 'none';
+            });
+            
+            if (localStorage.getItem('cookiesAccepted') === 'true') {
+                cookieBanner.style.display = 'none';
+            }
+        }
+        
+        });
     </script>
 </body>
 </html>
