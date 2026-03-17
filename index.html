@@ -905,33 +905,36 @@
         </div>
         
         <ul class="nav-links" id="navLinks">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#precios">Precios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+            <li><a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a></li>
+            <li><a href="#portafolio" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
+            <li><a href="#precios" data-es="Precios" data-en="Pricing">Precios</a></li>
+            <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
         </ul>
-        <a href="#precios" class="btn btn-primary">Empezar</a>
+        <div style="display: flex; gap: 15px; align-items: center;">
+            <button id="lang-toggle" class="btn btn-outline" style="padding: 8px 15px; font-size: 0.8rem; min-width: 60px;">EN</button>
+            <a href="#precios" class="btn btn-primary" data-es="Empezar" data-en="Get Started">Empezar</a>
+        </div>
     </nav>
 
     <!-- Hero -->
     <header id="inicio" class="hero">
         <canvas id="particles"></canvas>
         <div class="hero-bg"></div>
-        <div class="hero-title">Sitios web que generan <span class="accent-text" id="typing-text">impacto</span>.</div>
-        <p class="hero-subtitle">Diseño web premium que transforma visitantes en clientes. Moderno, rápido y optimizado para conversión.</p>
+        <div class="hero-title" data-es='Sitios web que generan <span class="accent-text" id="typing-text">impacto</span>.' data-en='Websites that generate <span class="accent-text" id="typing-text-en">impact</span>.'>Sitios web que generan <span class="accent-text" id="typing-text">impacto</span>.</div>
+        <p class="hero-subtitle" data-es="Diseño web premium que transforma visitantes en clientes. Moderno, rápido y optimizado para conversión." data-en="Premium web design that transforms visitors into customers. Modern, fast and optimized for conversion.">Diseño web premium que transforma visitantes en clientes. Moderno, rápido y optimizado para conversión.</p>
         <div class="hero-buttons">
-            <a href="#portafolio" class="btn btn-outline">Ver Portafolio</a>
-            <a href="#contacto" class="btn btn-primary">Comenzar Proyecto</a>
+            <a href="#portafolio" class="btn btn-outline" data-es="Ver Portafolio" data-en="View Portfolio">Ver Portafolio</a>
+            <a href="#contacto" class="btn btn-primary" data-es="Comenzar Proyecto" data-en="Start Project">Comenzar Proyecto</a>
         </div>
     </header>
 
     <!-- Emergency Banner -->
     <div class="emergency-banner">
         <div class="emergency-content">
-            <span class="emergency-badge">🔥 ÚLTIMOS CUPOS</span>
-            <p>¡Solo quedan 3 cupos disponibles este mes! 30% de descuento en todos los planes.</p>
-            <a href="#precios" class="btn btn-primary">Aprovechar Oferta</a>
+            <span class="emergency-badge" data-es="🔥 ÚLTIMOS CUPOS" data-en="🔥 LAST SPOTS">🔥 ÚLTIMOS CUPOS</span>
+            <p data-es="¡Solo quedan 3 cupos disponibles este mes! 30% de descuento en todos los planes." data-en="Only 3 spots left this month! 30% discount on all plans.">¡Solo quedan 3 cupos disponibles este mes! 30% de descuento en todos los planes.</p>
+            <a href="#precios" class="btn btn-primary" data-es="Aprovechar Oferta" data-en="Grab Offer">Aprovechar Oferta</a>
         </div>
     </div>
 
@@ -939,75 +942,75 @@
     <section class="stats">
         <div class="stat-item">
             <h3 class="stat-number">150+</h3>
-            <p class="stat-label">PROYECTOS</p>
+            <p class="stat-label" data-es="PROYECTOS" data-en="PROJECTS">PROYECTOS</p>
         </div>
         <div class="stat-item">
             <h3 class="stat-number accent-text">99%</h3>
-            <p class="stat-label">SATISFACCIÓN</p>
+            <p class="stat-label" data-es="SATISFACCIÓN" data-en="SATISFACTION">SATISFACCIÓN</p>
         </div>
         <div class="stat-item">
             <h3 class="stat-number">5+</h3>
-            <p class="stat-label">AÑOS</p>
+            <p class="stat-label" data-es="AÑOS" data-en="YEARS">AÑOS</p>
         </div>
     </section>
 
     <!-- Services -->
     <section id="servicios" class="services">
-        <h2 class="section-title fade-in">Servicios</h2>
+        <h2 class="section-title fade-in" data-es="Servicios" data-en="Services">Servicios</h2>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">✦</div>
-                <h3>Diseño Minimalista</h3>
-                <p>Interfaces elegantes centradas en la conversión y experiencia de usuario.</p>
+                <h3 data-es="Diseño Minimalista" data-en="Minimalist Design">Diseño Minimalista</h3>
+                <p data-es="Interfaces elegantes centradas en la conversión y experiencia de usuario." data-en="Elegant interfaces focused on conversion and user experience.">Interfaces elegantes centradas en la conversión y experiencia de usuario.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">✦</div>
-                <h3>Desarrollo Rápido</h3>
-                <p>Código limpio y rendimiento ultra-rápido garantizado.</p>
+                <h3 data-es="Desarrollo Rápido" data-en="Fast Development">Desarrollo Rápido</h3>
+                <p data-es="Código limpio y rendimiento ultra-rápido garantizado." data-en="Clean code and guaranteed ultra-fast performance.">Código limpio y rendimiento ultra-rápido garantizado.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">✦</div>
-                <h3>E-Commerce</h3>
-                <p>Tiendas online completas con Mercado Pago integrado.</p>
+                <h3 data-es="E-Commerce" data-en="E-Commerce">E-Commerce</h3>
+                <p data-es="Tiendas online completas con Mercado Pago integrado." data-en="Complete online stores with integrated Mercado Pago.">Tiendas online completas con Mercado Pago integrado.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">✦</div>
-                <h3>SEO & Posicionamiento</h3>
-                <p>Strategies probadas para posicionar tu marca en Google.</p>
+                <h3 data-es="SEO & Posicionamiento" data-en="SEO & Ranking">SEO & Posicionamiento</h3>
+                <p data-es="Strategies probadas para posicionar tu marca en Google." data-en="Proven strategies to position your brand on Google.">Strategies probadas para posicionar tu marca en Google.</p>
             </div>
         </div>
     </section>
 
     <!-- Proceso -->
     <section class="process">
-        <h2 class="section-title fade-in">Cómo trabajamos</h2>
+        <h2 class="section-title fade-in" data-es="Cómo trabajamos" data-en="Our Process">Cómo trabajamos</h2>
         <div class="process-grid">
             <div class="process-step">
                 <div class="step-number">01</div>
-                <h3>Consulta</h3>
-                <p>Nos cuentas tu idea y objetivos. Analizamos tu mercado y competencia.</p>
+                <h3 data-es="Consulta" data-en="Consultation">Consulta</h3>
+                <p data-es="Nos cuentas tu idea y objetivos. Analizamos tu mercado y competencia." data-en="Tell us your idea and goals. We analyze your market and competition.">Nos cuentas tu idea y objetivos. Analizamos tu mercado y competencia.</p>
             </div>
             <div class="process-step">
                 <div class="step-number">02</div>
-                <h3>Diseño</h3>
-                <p>Creamos mockups y prototipos. Vos apruebas el diseño antes de desarrollar.</p>
+                <h3 data-es="Diseño" data-en="Design">Diseño</h3>
+                <p data-es="Creamos mockups y prototipos. Vos apruebas el diseño antes de desarrollar." data-en="We create mockups and prototypes. You approve the design before development.">Creamos mockups y prototipos. Vos apruebas el diseño antes de desarrollar.</p>
             </div>
             <div class="process-step">
                 <div class="step-number">03</div>
-                <h3>Desarrollo</h3>
-                <p>Tu web se construye con código limpio y optimizado. Incluyendo animaciones.</p>
+                <h3 data-es="Desarrollo" data-en="Development">Desarrollo</h3>
+                <p data-es="Tu web se construye con código limpio y optimizado. Incluyendo animaciones." data-en="Your web is built with clean and optimized code. Including animations.">Tu web se construye con código limpio y optimizado. Incluyendo animaciones.</p>
             </div>
             <div class="process-step">
                 <div class="step-number">04</div>
-                <h3>Entrega</h3>
-                <p>Tu sitio online y listo para usar. Te enseñamos a gestionarlo.</p>
+                <h3 data-es="Entrega" data-en="Delivery">Entrega</h3>
+                <p data-es="Tu sitio online y listo para usar. Te enseñamos a gestionarlo." data-en="Your site online and ready to use. We teach you how to manage it.">Tu sitio online y listo para usar. Te enseñamos a gestionarlo.</p>
             </div>
         </div>
     </section>
 
     <!-- Certificaciones -->
     <section class="certifications">
-        <h2 class="section-title">Tecnología que usamos</h2>
+        <h2 class="section-title" data-es="Tecnología que usamos" data-en="Our Tech Stack">Tecnología que usamos</h2>
         <div class="cert-grid">
             <div class="cert-item">HTML5</div>
             <div class="cert-item">CSS3</div>
@@ -1025,7 +1028,7 @@
 
     <!-- Portfolio -->
     <section id="portafolio" class="portfolio">
-        <h2 class="section-title fade-in">Portafolio</h2>
+        <h2 class="section-title fade-in" data-es="Portafolio" data-en="Portfolio">Portafolio</h2>
         <div class="portfolio-grid">
             <div class="portfolio-card">
                 <div class="portfolio-img" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600') center/cover;"></div>
@@ -1100,22 +1103,22 @@
             <div class="pricing-card">
                 <h3>STARTER</h3>
                 <div class="price">$120.000</div>
-                <p class="price-desc">Landing page básica</p>
+                <p class="price-desc" data-es="Landing page básica" data-en="Basic landing page">Landing page básica</p>
                 <ul class="features">
-                    <li>1 Página</li>
-                    <li>Diseño Responsive</li>
+                    <li data-es="1 Página" data-en="1 Page">1 Página</li>
+                    <li data-es="Diseño Responsive" data-en="Responsive Design">Diseño Responsive</li>
                     <li>Formulario de Contacto</li>
                     <li>Animaciones</li>
                     <li>Mantenimiento $10k/mes</li>
                     <li>Entrega en 5 días</li>
                 </ul>
-                <a href="https://mpago.la/2finuZp" target="_blank" class="btn btn-outline">Pagar $60.000</a>
+                <a href="https://mpago.la/2finuZp" target="_blank" class="btn btn-outline" data-es="Pagar $60.000" data-en="Pay $60.000">Pagar $60.000</a>
             </div>
             <div class="pricing-card popular">
-                <div class="popular-badge">MÁS POPULAR</div>
+                <div class="popular-badge" data-es="MÁS POPULAR" data-en="MOST POPULAR">MÁS POPULAR</div>
                 <h3>PROFESIONAL</h3>
                 <div class="price">$250.000</div>
-                <p class="price-desc">Web completa</p>
+                <p class="price-desc" data-es="Web completa" data-en="Full website">Web completa</p>
                 <ul class="features">
                     <li>Hasta 5 Secciones</li>
                     <li>CMS Básico</li>
@@ -1124,12 +1127,12 @@
                     <li>Mantenimiento $15k/mes</li>
                     <li>Entrega en 10 días</li>
                 </ul>
-                <a href="https://mpago.la/1PFRPr4" target="_blank" class="btn btn-primary">Pagar $125.000</a>
+                <a href="https://mpago.la/1PFRPr4" target="_blank" class="btn btn-primary" data-es="Pagar $125.000" data-en="Pay $125.000">Pagar $125.000</a>
             </div>
             <div class="pricing-card">
                 <h3>E-COMMERCE</h3>
                 <div class="price">$450.000</div>
-                <p class="price-desc">Tienda online</p>
+                <p class="price-desc" data-es="Tienda online" data-en="Online store">Tienda online</p>
                 <ul class="features">
                     <li>Carrito de Compras</li>
                     <li>Mercado Pago</li>
@@ -1138,7 +1141,7 @@
                     <li>Mantenimiento $20k/mes</li>
                     <li>Entrega en 15 días</li>
                 </ul>
-                <a href="https://mpago.la/2nwx7zS" target="_blank" class="btn btn-outline">Pagar $225.000</a>
+                <a href="https://mpago.la/2nwx7zS" target="_blank" class="btn btn-outline" data-es="Pagar $225.000" data-en="Pay $225.000">Pagar $225.000</a>
             </div>
         </div>
     </section>
@@ -1158,7 +1161,7 @@
 
     <!-- FAQ -->
     <section class="faq">
-        <h2 class="section-title fade-in">Preguntas Frecuentes</h2>
+        <h2 class="section-title fade-in" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</h2>
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question">¿Cuánto tiempo tardan en entregar?</div>
@@ -1191,37 +1194,37 @@
     <section class="newsletter">
         <div class="newsletter-content">
             <h2>📧 Newsletter</h2>
-            <p>Recibí tips de marketing digital y ofertas exclusivas.</p>
+            <p data-es="Recibí tips de marketing digital y ofertas exclusivas." data-en="Get digital marketing tips and exclusive offers.">Recibí tips de marketing digital y ofertas exclusivas.</p>
             <form class="newsletter-form" action="https://formspree.io/f/xgonnjav" method="POST">
                 <input type="hidden" name="_subject" value="Nuevo Suscriptor Newsletter - Nexus">
                 <input type="email" name="email_newsletter" placeholder="Tu email" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
+                <button type="submit" class="btn btn-primary" data-es="Suscribirse" data-en="Subscribe">Suscribirse</button>
             </form>
         </div>
     </section>
 
     <!-- Contact -->
     <section id="contacto" class="contact">
-        <h2 class="section-title fade-in">Contacto</h2>
-        <div class="contact-subtitle">¿Listo para tu nuevo sitio web? Escríbenos.</div>
+        <h2 class="section-title fade-in" data-es="Contacto" data-en="Contact">Contacto</h2>
+        <div class="contact-subtitle" data-es="¿Listo para tu nuevo sitio web? Escríbenos." data-en="Ready for your new website? Write to us.">¿Listo para tu nuevo sitio web? Escríbenos.</div>
         <form class="contact-form" action="https://formspree.io/f/xdawlwjg" method="POST">
             <input type="hidden" name="_subject" value="Nueva Consulta Web - Nexus">
             <div class="form-group">
-                <input type="text" name="nombre" id="contactName" placeholder="Tu nombre completo" required>
+                <input type="text" name="nombre" id="contactName" placeholder="Tu nombre completo" data-es-placeholder="Tu nombre completo" data-en-placeholder="Your full name" required>
             </div>
             <div class="form-group">
-                <input type="email" name="email" id="contactEmail" placeholder="Tu correo electrónico" required>
+                <input type="email" name="email" id="contactEmail" placeholder="Tu correo electrónico" data-es-placeholder="Tu correo electrónico" data-en-placeholder="Your email address" required>
             </div>
             <div class="form-group">
-                <textarea name="mensaje" id="contactMessage" placeholder="Tu mensaje o consulta..." rows="5"></textarea>
+                <textarea name="mensaje" id="contactMessage" placeholder="Tu mensaje o consulta..." data-es-placeholder="Tu mensaje o consulta..." data-en-placeholder="Your message or inquiry..." rows="5"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+            <button type="submit" class="btn btn-primary" data-es="Enviar Mensaje" data-en="Send Message">Enviar Mensaje</button>
         </form>
     </section>
 
     <!-- Testimonials -->
     <section class="testimonials">
-        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <h2 class="section-title" data-es="Lo que dicen nuestros clientes" data-en="Client Testimonials">Lo que dicen nuestros clientes</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <p>"Nexus transformó completamente nuestra presencia online. El tráfico aumentó un 200% en solo 2 meses. ¡Totalmente recomendados!"</p>
@@ -1328,8 +1331,35 @@
             } catch(e) { console.log(e); }
         }
         
-        function playHover() { playSound(440, 0.1); }
-        function playClick() { playSound(330, 0.15); }
+        function playHover() { if (soundEnabled && typeof playSound === 'function') playSound(440, 0.1); }
+        // Language Toggle Logic
+        let currentLang = localStorage.getItem('nexus_lang') || 'es';
+        const langToggle = document.getElementById('lang-toggle');
+        
+        function updateLanguage() {
+            document.querySelectorAll('[data-es]').forEach(el => {
+                const text = el.getAttribute(`data-${currentLang}`);
+                if (text) el.innerHTML = text;
+            });
+            document.querySelectorAll('[data-es-placeholder]').forEach(el => {
+                const text = el.getAttribute(`data-${currentLang}-placeholder`);
+                if (text) el.placeholder = text;
+            });
+            if (langToggle) langToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+            document.documentElement.lang = currentLang;
+            if (typeof initTypingEffect === 'function') initTypingEffect();
+        }
+        
+        if (langToggle) {
+            langToggle.addEventListener('click', function() {
+                currentLang = currentLang === 'es' ? 'en' : 'es';
+                localStorage.setItem('nexus_lang', currentLang);
+                updateLanguage();
+                if (soundEnabled && typeof playSound === 'function') playSound(330, 0.15);
+            });
+        }
+        
+        updateLanguage();
         
         // Sound toggle
         var soundToggle = document.getElementById('soundToggle');
@@ -1355,7 +1385,14 @@
         document.addEventListener('DOMContentLoaded', function() {
         
         // Typing effect
-        var words = ["impacto", "ventas", "clientes", "éxito"];
+        let words = [];
+        function initTypingEffect() {
+            const esWords = ["impacto", "ventas", "clientes", "éxito"];
+            const enWords = ["impact", "sales", "customers", "success"];
+            words = (typeof currentLang !== 'undefined' && currentLang === 'en') ? enWords : esWords;
+            wordIndex = 0; charIndex = 0; isDeleting = false;
+        }
+        initTypingEffect();
         var wordIndex = 0, charIndex = 0, isDeleting = false, typeSpeed = 150;
         
         function type() {
